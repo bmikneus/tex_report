@@ -31,12 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pdf.apps.PdfConfig',
+    'reports.apps.ReportsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
@@ -124,14 +127,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'CRG_site/static/')
+    os.path.join(BASE_DIR, 'tex_report/static/')
 ]
-
+#C:\Users\Brandon Mikneus\Documents\personal\Personal_Repository\tex-report\tex_report\static
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
 
 try:
     from .local_settings import *

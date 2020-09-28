@@ -1,0 +1,1 @@
+WKHTMLTOPDF_PATH = "/Program Files/wkhtmltopdf/bin/wkhtmltopdf"
