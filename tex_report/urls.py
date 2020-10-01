@@ -24,3 +24,11 @@ urlpatterns = [
     path('dopdf', pdfviews.testPDF, name='doPDF'),
     path('invoice', pdfviews.get, name='invoice'),
 ]
+
+from .tasks import build_pdf
+from background_task import background
+import datetime
+#from datetime import timezone
+build_pdf(repeat=120)
+
+#print("calling build_pdf")

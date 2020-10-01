@@ -56,4 +56,5 @@ def get(request):
     }
     pdf = render_to_pdf('pdf/report.html', data)
     
-    return HttpResponse(pdf, content_type='application/pdf')
+    return render(request, 'reports/report.html')#HttpResponse(pdf, content_type='application/pdf')
+
