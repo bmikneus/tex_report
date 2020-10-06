@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from .models import Report
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url="/login")
 def ReportForm(request):
     if request.method == 'POST':
         if len(request.POST['description']) < 1000 and len(request.POST['other']) < 50 and len(request.POST['reporter']) < 30:

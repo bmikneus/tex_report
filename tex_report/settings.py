@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'login.apps.LoginConfig',
     'pdf.apps.PdfConfig',
     'reports.apps.ReportsConfig',
     'django.contrib.admin',

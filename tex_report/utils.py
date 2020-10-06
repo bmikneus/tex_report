@@ -21,6 +21,8 @@ def render_to_pdf(template_src, context_dict={}):
     file = open(destination + filename, "w+b")
 
     pisaStatus = pisa.CreatePDF(html.encode('utf-8'), dest=file, encoding='utf-8')
+    print(destination + filename)
+    file.close()
     emailPDF(destination + filename)
     # Displays PDF
     if not pdf.err:

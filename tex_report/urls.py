@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from reports import views
 from pdf import views as pdfviews
+from login import views as loginviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.ReportForm, name='report'),
-    path('createpdf', pdfviews.createPDF, name='createPDF'),
-    path('dopdf', pdfviews.testPDF, name='doPDF'),
+    path('login', loginviews.login, name='login'),
+    #path('createpdf', pdfviews.createPDF, name='createPDF'),
+    #path('dopdf', pdfviews.testPDF, name='doPDF'),
     path('invoice', pdfviews.get, name='invoice'),
 ]
 
@@ -29,6 +31,6 @@ from .tasks import build_pdf
 from background_task import background
 import datetime
 #from datetime import timezone
-build_pdf(repeat=120)
+#build_pdf(repeat=120)
 
 #print("calling build_pdf")
