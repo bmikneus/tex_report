@@ -43,7 +43,7 @@ from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 def emailPDF(filename):
     email = EmailMessage(
-        'Big Tex Incident Report', 'The auto-generated Big Tex Incident Report has been attached to this email', settings.EMAIL_HOST_USER, ['bmikneus@sroassociates.com'])
+        'Big Tex Incident Report', 'The auto-generated Big Tex Incident Report has been attached to this email', settings.EMAIL_HOST_USER,  ['bmikneus@sroassociates.com'])
     email.attach_file(filename)
     email.send()  
 
