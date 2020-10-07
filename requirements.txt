@@ -12,8 +12,8 @@ psycopg2>=2.8
 PyPDF2==1.26.0
 pyRXP>=2.2
 pytz==2020.1
-reportlab>=3.5
-rlextra>=3.5
+reportlab>=3
+rlextra>=3
 six==1.15.0
 sqlparse==0.3.1
 webencodings==0.5.1
